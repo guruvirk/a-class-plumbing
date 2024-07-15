@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plumber Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".testimonial-slide-wrapper");
+        const totalSlides = slides.length;
+
+        function showSlides() {
+          slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+          });
+        }
+
+        function slideLeft() {
+          if (slideIndex === 0) {
+            slideIndex = totalSlides - 1;
+          } else {
+            slideIndex--;
+          }
+          showSlides();
+        }
+
+        function slideRight() {
+          if (slideIndex === totalSlides - 1) {
+            slideIndex = 0;
+          } else {
+            slideIndex++;
+          }
+          showSlides();
+        }
+
+        // Attach event listeners to arrow elements
+        document
+          .querySelector(".testimonial-slider-left")
+          .addEventListener("click", slideLeft);
+        document
+          .querySelector(".testimonial-slider-right")
+          .addEventListener("click", slideRight);
+
+        // Initialize slider
+        showSlides();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div
+        data-collapse="medium"
+        data-animation="default"
+        data-duration="400"
+        data-easing="ease"
+        data-easing2="ease"
+        role="banner"
+        class="navbar w-nav"
+      ></div>
+    </div>
+    <header class="container-fluid container-navbar">
+      <div class="navbar-menu-wrapper">
+        <a
+          href="/"
+          aria-current="page"
+          class="brand-logo w-nav-brand w--current"
+          aria-label="home"
+          ><img
+            src="assets/logo.png"
+            height=""
+            alt="Canyon Logo"
+            class="brand-logo-image"
+        /></a>
+      </div>
+      <nav class="navbar-menu dark w-nav-menu">
+        <ul>
+          <li class="dropdown">
+            <a href="#">Our Services <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#"
+                  >Furnace & Air Conditioning</a
+                >
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#"
+                  >Service & Maintenance</a
+                >
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#"
+                  >Renovations & Poly B Replacement</a
+                >
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#"
+                  >Residential Contract Plumbing</a
+                >
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#"
+                  >Residential Contract HVAC</a
+                >
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#">Custom Homes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#"
+              >Products/Suppliers <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#">Plumbing</a>
+              </li>
+              <li><a class="nav-text nav-link s-m-r-0" href="#">HVAC</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Showroom </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#">About Us</a>
+              </li>
+              <li>
+                <a class="nav-text nav-link s-m-r-0" href="#">Our Team</a>
+              </li>
+              <li><a class="nav-text nav-link s-m-r-0" href="#">Carrier</a></li>
+              <li><a class="nav-text nav-link s-m-r-0" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="navbar-menu-right">
+            <a class="button medium w-button" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero-section hero-gradient">
+      <div class="accent absolute color round-right"></div>
+      <div class="container">
+        <div class="st-p-y-64">
+          <div class="w-layout-grid hero-grid">
+            <div class="wrapper-l st-p-0">
+              <h1 class="heading xl s-m-t-64">
+                Calgary's Top Choice Since 1978
+              </h1>
+              <p class="body-text l s-m-r-24">
+                We’re committed to the highest standards of industry excellence
+                and accountability to our customers and community. See how our
+                plumbing, furnace and air conditioning services stand a cut
+                above the rest.
+              </p>
+              <div class="ctas-wrapper">
+                <a href="#" class="button medium w-button">View Services</a>
+              </div>
+            </div>
+            <div class="grid-wrapper">
+              <div class="grid-multi-image s-m-r-24">
+                <div
+                  id="w-node-ecd7c4d9-8eb8-5c4c-5a67-2dcbbba90a94-877c7330"
+                  class="rounded-wrapper"
+                >
+                  <img
+                    src="assets/dog.jpg"
+                    loading="lazy"
+                    alt="Dog in the bathtub with rubber duck on its head"
+                    sizes="(max-width: 479px) 45vw, (max-width: 767px) 44vw, (max-width: 991px) 46vw, (max-width: 1919px) 47vw, 588.0034790039062px"
+                    srcset="
+                      assets/dog-p-500.jpg   500w,
+                      assets/dog-p-800.jpg   800w,
+                      assets/dog-p-1080.jpg 1080w,
+                      assets/dog.jpg        1400w
+                    "
+                    class="image-in-grid"
+                  />
+
+                  <div class="ic-wrapper-absolute">
+                    <img src="assets/icon_chain.png" loading="lazy" alt="" />
+                  </div>
+                </div>
+                <div
+                  id="w-node-ecd7c4d9-8eb8-5c4c-5a67-2dcbbba90a98-877c7330"
+                  class="rounded-wrapper"
+                >
+                  <img
+                    src="assets/64260351c21ab46330cbc86a_G_Ensuit.jpg"
+                    loading="lazy"
+                    alt="Dog in the bathtub with rubber duck on its head"
+                    sizes="(max-width: 479px) 45vw, (max-width: 767px) 44vw, (max-width: 991px) 46vw, (max-width: 1919px) 47vw, 588.0034790039062px"
+                    srcset="
+                      assets/64260351c21ab46330cbc86a_G_Ensuit-p-500.jpg   500w,
+                      assets/64260351c21ab46330cbc86a_G_Ensuit-p-800.jpg   800w,
+                      assets/64260351c21ab46330cbc86a_G_Ensuit-p-1080.jpg 1080w,
+                      assets/64260351c21ab46330cbc86a_G_Ensuit.jpg        1400w
+                    "
+                    class="image-in-grid"
+                  />
+                  <div class="ic-wrapper-absolute big">
+                    <img src="assets/round text.svg" loading="lazy" alt="" />
+                  </div>
+                  <div class="ic-wrapper-absolute down">
+                    <img src="assets/hero-3.png" loading="lazy" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="grid-multi-image s-m-t-64">
+                <div
+                  id="w-node-ecd7c4d9-8eb8-5c4c-5a67-2dcbbba90a9f-877c7330"
+                  class="rounded-wrapper"
+                >
+                  <img
+                    src="assets/64260379e6effddfe1fc8d4f_e_Elgin_Bsmt.jpg"
+                    loading="lazy"
+                    alt=""
+                    sizes="(max-width: 479px) 45vw, (max-width: 767px) 44vw, (max-width: 991px) 46vw, (max-width: 1919px) 47vw, 588.0034790039062px"
+                    srcset="
+                      assets/64260379e6effddfe1fc8d4f_e_Elgin_Bsmt-p-500.jpg   500w,
+                      assets/64260379e6effddfe1fc8d4f_e_Elgin_Bsmt-p-800.jpg   800w,
+                      assets/64260379e6effddfe1fc8d4f_e_Elgin_Bsmt-p-1080.jpg 1080w,
+                      assets/64260379e6effddfe1fc8d4f_e_Elgin_Bsmt.jpg        1400w
+                    "
+                    class="image-in-grid"
+                  />
+                </div>
+                <div
+                  id="w-node-ecd7c4d9-8eb8-5c4c-5a67-2dcbbba90aa1-877c7330"
+                  class="rounded-wrapper"
+                >
+                  <img
+                    src="assets/63dab2877073bc96a028952a_modern-white-sink-on-timber-vanity-2022-11-14-10-04-43-utc.jpg"
+                    loading="lazy"
+                    alt="Bathroom sink with golden faucet"
+                    sizes="(max-width: 479px) 45vw, (max-width: 767px) 44vw, (max-width: 991px) 46vw, (max-width: 1919px) 47vw, 588.0034790039062px"
+                    srcset="
+                      assets/63dab2877073bc96a028952a_modern-white-sink-on-timber-vanity-2022-11-14-10-04-43-utc-p-500.jpg  500w,
+                      assets/63dab2877073bc96a028952a_modern-white-sink-on-timber-vanity-2022-11-14-10-04-43-utc-p-800.jpg  800w,
+                      assets/63dab2877073bc96a028952a_modern-white-sink-on-timber-vanity-2022-11-14-10-04-43-utc.jpg       1400w
+                    "
+                    class="image-in-grid"
+                  />
+                  <div class="ic-wrapper-absolute">
+                    <img
+                      src="assets/63dab4afbfcb49591bb13aaf_hero-2.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature-grid-section s-m-t-64">
+      <div class="line-accent absolute right">
+        <img
+          src="assets/6407cb7f65d48e2dc6088fcf_accent%20line%20right.svg"
+          loading="lazy"
+          alt=""
+        />
+      </div>
+      <div class="accent absolute color right-side"></div>
+      <div class="container">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="section-title-circles s-m-b-44">
+            <div class="accent center-content s-m-b-24">
+              <img
+                src="assets/6407cbbbd351e81a544aa895_accent middle.svg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+            <h2 class="heading l">Explore Our Services</h2>
+          </div>
+        </div>
+        <div class="w-dyn-list">
+          <div class="l-g-3-col w-dyn-items" role="list">
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/furnace-air-conditioning"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                          skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/642c8105131dd611432d58bc_air-conditional.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/642c8105131dd611432d58bc_air-conditional-p-500.jpg   500w,
+                        assets/642c8105131dd611432d58bc_air-conditional-p-800.jpg   800w,
+                        assets/642c8105131dd611432d58bc_air-conditional-p-1080.jpg 1080w,
+                        assets/642c8105131dd611432d58bc_air-conditional.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Furnace &amp; Air Conditioning
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Replace your outdated furnace or beat the heat this summer
+                      by installing air conditioning — we have the systems and
+                      expertise to keep your home comfortable year-round.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="assets/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/service-and-maintenance"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0px, 0px, 0px)
+                          scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg)
+                          rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-500.jpg   500w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-800.jpg   800w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-1080.jpg 1080w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Service &amp; Maintenance
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Whether it’s a leaky faucet, a noisy furnace or a tankless
+                      hot water heater in need of maintenance, we troubleshoot
+                      service issues and concerns and provide extensive repairs
+                      and installations for your home’s plumbing, heating and
+                      air conditioning systems.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="assets/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/renovations-and-poly-b-replacement"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                          skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/6425c25541e57164aaf1d659_bathrom.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/6425c25541e57164aaf1d659_bathrom-p-500.jpg   500w,
+                        assets/6425c25541e57164aaf1d659_bathrom-p-800.jpg   800w,
+                        assets/6425c25541e57164aaf1d659_bathrom-p-1080.jpg 1080w,
+                        assets/6425c25541e57164aaf1d659_bathrom.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Renovations &amp; Poly B Replacement
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Does your kitchen or bathroom need a refresh? Trust our
+                      team to provide expert aid in your home renovation or Poly
+                      B piping replacement services.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="https://assets.website-files.com/63b49d09db8aee757c7c732e/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/service-and-maintenance"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0px, 0px, 0px)
+                          scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg)
+                          rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-500.jpg   500w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-800.jpg   800w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-1080.jpg 1080w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Service &amp; Maintenance
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Whether it’s a leaky faucet, a noisy furnace or a tankless
+                      hot water heater in need of maintenance, we troubleshoot
+                      service issues and concerns and provide extensive repairs
+                      and installations for your home’s plumbing, heating and
+                      air conditioning systems.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="assets/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/service-and-maintenance"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0px, 0px, 0px)
+                          scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg)
+                          rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-500.jpg   500w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-800.jpg   800w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-1080.jpg 1080w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Service &amp; Maintenance
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Whether it’s a leaky faucet, a noisy furnace or a tankless
+                      hot water heater in need of maintenance, we troubleshoot
+                      service issues and concerns and provide extensive repairs
+                      and installations for your home’s plumbing, heating and
+                      air conditioning systems.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="assets/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+            <div
+              data-w-id="44e80fc4-9829-3739-13a8-62420b52761d"
+              role="listitem"
+              class="w-dyn-item"
+            >
+              <a
+                href="/services/service-and-maintenance"
+                class="card-link-block w-inline-block"
+                ><div class="feature-block center-rounded s-m-0 zoom-on-hover">
+                  <div class="image-wrapper _14-rounded">
+                    <div class="accent-line"></div>
+                    <img
+                      data-w-id="e120e630-fc38-f96c-7652-81b1e72ec696"
+                      loading="lazy"
+                      style="
+                        transform: translate3d(0px, 0px, 0px)
+                          scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg)
+                          rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                      "
+                      src="assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg"
+                      alt=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, (max-width: 1919px) 31vw, 382.8993225097656px"
+                      srcset="
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-500.jpg   500w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-800.jpg   800w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform-p-1080.jpg 1080w,
+                        assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg        1400w
+                      "
+                      class="image-rounded-top"
+                    />
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h3 class="heading s center-content">
+                      Service &amp; Maintenance
+                    </h3>
+                    <div class="body-text m s-m-b-16">
+                      Whether it’s a leaky faucet, a noisy furnace or a tankless
+                      hot water heater in need of maintenance, we troubleshoot
+                      service issues and concerns and provide extensive repairs
+                      and installations for your home’s plumbing, heating and
+                      air conditioning systems.
+                    </div>
+                    <div class="text-icon-wrapper-2">
+                      <div class="text-btn">Learn More</div>
+                      <img
+                        src="assets/63dc418e30627c4e01192bf1_arrow_forward.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon s-m-l-8"
+                      />
+                    </div>
+                  </div></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature-section">
+      <div class="container">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="w-layout-grid feature-grid">
+            <div
+              id="w-node-_8c108585-d3dd-47b2-45d6-f883e9afdba1-877c7330"
+              class="image-wrapper full-image"
+            >
+              <img
+                src="assets/63dbece57692383003e48d77_showroom.jpg"
+                loading="lazy"
+                alt="Faucets in showroom"
+                sizes="(max-width: 479px) 100vw, (max-width: 991px) 95vw, (max-width: 1919px) 96vw, 1200.0087890625px"
+                srcset="
+                  assets/63dbece57692383003e48d77_showroom-p-500.jpg  500w,
+                  assets/63dbece57692383003e48d77_showroom.jpg       1200w
+                "
+                class="image-fit static-image"
+              />
+              <div class="ic-wrapper-absolute big right middle">
+                <img src="assets/round text.svg" loading="lazy" alt="" />
+              </div>
+            </div>
+            <div class="feature-content-wrapper right">
+              <h2 class="heading l">Visit Our Showroom</h2>
+              <p class="body-text l">
+                Have a vision for your home but no idea how to bring it to life?
+                Let our talented Interior Designers show you the way! From new
+                builds and renovations to simple supply-only needs, we have a
+                solution for whatever you need.
+              </p>
+              <div class="ctas-wrapper">
+                <a href="/showroom" class="button medium w-button"
+                  >Book an Appointment</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature-section">
+      <div class="accent absolute color round-right line"></div>
+      <div class="container">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="w-layout-grid feature-grid long">
+            <div
+              id="w-node-_30e4b591-378f-84d8-4565-4e6075e916f0-877c7330"
+              class="feature-content-wrapper left"
+            >
+              <h2 class="heading l">Our Promise to You</h2>
+              <p class="body-text l">
+                We stand behind the materials we use and the people who install
+                them. We're passionate about looking for ways to deliver
+                superior quality, exceptional service and long-term
+                solutions.<br /><br />Our 2-year parts and labour warranty is
+                another chance to give you more of what you really want — peace
+                of mind. Any defective materials will be repaired or replaced
+                under the warranty within the 2-year period, which begins on the
+                occupancy date. Most products carry an extended warranty, which
+                is provided by the manufacturer and not Canyon Plumbing and
+                Heating. For full details regarding the Warranty Program, please
+                view the full Warranty Policy.
+              </p>
+              <div class="ctas-wrapper">
+                <a
+                  href="assets/63e6a39a6c8fe2a3ccd5bca3_2YR%20Warranty%20Info-rev091418.pdf"
+                  target="_blank"
+                  class="button medium w-button"
+                  >View Warranty Policy</a
+                >
+              </div>
+            </div>
+            <div
+              id="w-node-f7b6e7be-4573-1ad4-8fb6-3d6496f44d8b-877c7330"
+              class="wrapper-circle-text"
+            >
+              <img
+                src="assets/6425c710c24561159af37646_round.svg"
+                loading="lazy"
+                alt=""
+                class="image-4"
+              />
+              <div class="center-text-absolute">
+                45 years of <br />experience
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonial-slider-small overflow-none">
+      <div class="accent absolute color right-side arch right"></div>
+      <div class="container s-m-r-l-0">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="bg-color">
+            <div class="section-title-circles s-m-b-44">
+              <div class="accent center-content s-m-b-24">
+                <img
+                  src="assets/6407cbbbd351e81a544aa895_accent middle.svg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <h2 class="heading l">Our happy customers</h2>
+            </div>
+            <div
+              data-delay="4000"
+              data-animation="slide"
+              class="testimonial-slider w-slider"
+              data-autoplay="false"
+              data-easing="ease"
+              data-hide-arrows="false"
+              data-disable-swipe="false"
+              data-autoplay-limit="0"
+              data-nav-spacing="3"
+              data-duration="500"
+              data-infinite="true"
+              role="region"
+              aria-label="carousel"
+            >
+              <div class="w-slider-mask" id="w-slider-mask-0">
+                <div
+                  class="testimonial-slide-wrapper w-slide"
+                  aria-label="1 of 4"
+                  role="group"
+                  style="transform: translateX(0px); opacity: 1"
+                >
+                  <div class="testimonial-box-3 white-card">
+                    <p class="body-text m">
+                      I recently used Canyon Plumbing &amp; Heating to replace
+                      my Poly B piping and my hot water tank. From arranging the
+                      work to getting it done the team was fantastic! Great
+                      customer service and very responsive. They ended up
+                      charging me less then the original quote when they said it
+                      didn't take as much work as originally thought. I am
+                      guessing most companies wouldn't have done that and I
+                      never would have known! I highly recommend this company!
+                    </p>
+                    <div class="avatar-wrapper horizontal">
+                      <div class="avatar-label-text-2">
+                        <div class="body-text-2 m bold c-t-neutral-100">
+                          <strong class="body-text m bold"
+                            >Leanne Dawkins</strong
+                          >
+                        </div>
+                        <div class="body-text s">Google Review</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="testimonial-slide-wrapper w-slide"
+                  aria-label="2 of 4"
+                  role="group"
+                  style="transform: translateX(0px); opacity: 1"
+                >
+                  <div class="testimonial-box-3 white-card">
+                    <p class="body-text m">
+                      Canyon Plumbing has been servicing our boiler heating
+                      system since it was installed by Canyon Plumbing 11 years
+                      ago. &nbsp;Canyon's service department is second to none,
+                      in that they have responded to our servicing needs
+                      promptly and on occasion going beyond what was expected in
+                      order to ensure our heating system continues to provide
+                      reliable heat.<br /><br />‍
+                    </p>
+                    <div class="avatar-wrapper horizontal">
+                      <div class="avatar-label-text-2">
+                        <div class="body-text-2 m bold c-t-neutral-100">
+                          <strong class="body-text m bold">Paul Kennedy</strong>
+                        </div>
+                        <div class="body-text s">Google Review</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="testimonial-slide-wrapper w-slide"
+                  aria-label="3 of 4"
+                  role="group"
+                  aria-hidden="true"
+                  style="transform: translateX(0px); opacity: 1"
+                >
+                  <div class="testimonial-box-3 white-card" aria-hidden="true">
+                    <p class="body-text m" aria-hidden="true">
+                      I had canyon plumbing come a few times to my property but
+                      this time in particular the quality of work we incredible.
+                      Mike Hindley came out to install a water alarm sensor for
+                      us, and noticed that our lift station was on the brink of
+                      failure. Thanks to his attention to detail we are able to
+                      sleep soundly at night. &nbsp; <br aria-hidden="true" />I
+                      can't say enough great things.
+                    </p>
+                    <div class="avatar-wrapper horizontal" aria-hidden="true">
+                      <div class="avatar-label-text-2" aria-hidden="true">
+                        <div
+                          class="body-text-2 m bold c-t-neutral-100"
+                          aria-hidden="true"
+                        >
+                          <strong class="body-text m bold" aria-hidden="true"
+                            >Vincent Ly</strong
+                          >
+                        </div>
+                        <div class="body-text-2 s s-m-b-0" aria-hidden="true">
+                          Google Review
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="testimonial-slide-wrapper w-slide"
+                  aria-label="4 of 4"
+                  role="group"
+                  aria-hidden="true"
+                  style="transform: translateX(0px); opacity: 1"
+                >
+                  <div class="testimonial-box-3 white-card" aria-hidden="true">
+                    <p class="body-text m" aria-hidden="true">
+                      I recently had the Poly B water pipes replaced in my home.
+                      &nbsp;Jeremy and Brodie of Canyon Plumbing did the work
+                      and they were very hard working, efficient, personable and
+                      helpful. &nbsp;They came up with innovative ways to
+                      replace the pipe so that there was minimal damage to walls
+                      so I did not have to have new drywall work done.Canyon's
+                      quote was very very reasonable.
+                    </p>
+                    <div class="avatar-wrapper horizontal" aria-hidden="true">
+                      <div class="avatar-label-text-2" aria-hidden="true">
+                        <div
+                          class="body-text-2 m bold c-t-neutral-100"
+                          aria-hidden="true"
+                        >
+                          <strong class="body-text m bold" aria-hidden="true"
+                            >June Mohr</strong
+                          >
+                        </div>
+                        <div class="body-text-2 s s-m-b-0" aria-hidden="true">
+                          Google Review
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-live="off"
+                  aria-atomic="true"
+                  class="w-slider-aria-label"
+                  data-wf-ignore=""
+                ></div>
+              </div>
+              <div
+                class="testimonial-slider-left w-slider-arrow-left"
+                role="button"
+                tabindex="0"
+                aria-controls="w-slider-mask-0"
+                aria-label="previous slide"
+              >
+                <div class="arrow-wrapper">
+                  <img
+                    src="assets/63dbf9581d66b4b54961101b_arrow-left.png"
+                    loading="lazy"
+                    alt="Arrow back"
+                    class="arrow"
+                  />
+                </div>
+              </div>
+              <div
+                class="testimonial-slider-right w-slider-arrow-right"
+                role="button"
+                tabindex="0"
+                aria-controls="w-slider-mask-0"
+                aria-label="next slide"
+              >
+                <div class="arrow-wrapper">
+                  <img
+                    src="assets/63dbf934e0439892c390bd7c_arrow-right.png"
+                    loading="lazy"
+                    alt="Arrow Forward"
+                    class="arrow"
+                  />
+                </div>
+              </div>
+              <div class="testimonial-slide-nav w-slider-nav w-round">
+                <div
+                  class="w-slider-dot w-active"
+                  data-wf-ignore=""
+                  aria-label="Show slide 1 of 2"
+                  aria-pressed="true"
+                  role="button"
+                  tabindex="0"
+                  style="margin-left: 3px; margin-right: 3px"
+                ></div>
+                <div
+                  class="w-slider-dot"
+                  data-wf-ignore=""
+                  aria-label="Show slide 2 of 2"
+                  aria-pressed="false"
+                  role="button"
+                  tabindex="-1"
+                  style="margin-left: 3px; margin-right: 3px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="logo-garden-6-col">
+      <div class="container">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="section-title-circles s-m-b-44 _60">
+            <div class="accent center-content s-m-b-24"></div>
+            <div class="heading l center-content">Explore. Dream. Build.</div>
+            <div class="body-text m center-content">
+              Browse the links below and explore the latest designs &amp;
+              products. Click any image to view more by the same
+              designer/supplier.
+            </div>
+          </div>
+          <div class="collection-list-wrapper white w-dyn-list">
+            <div role="list" class="collection-list w-dyn-items">
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a
+                  href="https://www.blanco.com/ca-en/"
+                  target="_blank"
+                  class="w-inline-block"
+                  ><img
+                    src="assets/63e572400cf49fa54a3040c6_blanco.png"
+                    loading="lazy"
+                    alt=""
+                    class="logo-parade"
+                /></a>
+              </div>
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a
+                  href="https://www.brizofaucet.ca"
+                  target="_blank"
+                  class="w-inline-block"
+                  ><img
+                    src="assets/63e5734d47aaffdf708ac815_Brizo.png"
+                    loading="lazy"
+                    alt=""
+                    class="logo-parade"
+                /></a>
+              </div>
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a
+                  href="https://www.deltafaucet.ca"
+                  target="_blank"
+                  class="w-inline-block"
+                  ><img
+                    src="assets/63e573cec2f6764d0fb43f5e_Delta.png"
+                    loading="lazy"
+                    alt=""
+                    class="logo-parade"
+                /></a>
+              </div>
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a
+                  href="https://www.goodmanmfg.com/products/gas-furnaces"
+                  target="_blank"
+                  class="w-inline-block"
+                  ><img
+                    src="assets/63e5777ccb847d3bbae7048d_gdmnlogo.png"
+                    loading="lazy"
+                    alt=""
+                    class="logo-parade"
+                /></a>
+              </div>
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a href="https://maax.ca" target="_blank" class="w-inline-block"
+                  ><img
+                    src="assets/63e57c824b8560cb93dc784a_73f0108a11c2f8737a3b32b0ac9b5129.png"
+                    loading="lazy"
+                    alt=""
+                    class="logo-parade"
+                /></a>
+              </div>
+              <div role="listitem" class="logo-link-block w-dyn-item">
+                <a
+                  href="https://www.moen.ca"
+                  target="_blank"
+                  class="w-inline-block"
+                  ><img
+                    src="assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg.png"
+                    loading="lazy"
+                    alt=""
+                    sizes="100vw"
+                    srcset="
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg-p-500.png   500w,
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg-p-800.png   800w,
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg-p-1080.png 1080w,
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg-p-1600.png 1600w,
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg-p-2000.png 2000w,
+                      assets/63e57db2135f2f5c19c613b0_2560px-Moen_logo.svg.png        2560w
+                    "
+                    class="logo-parade"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-section">
+      <div class="container">
+        <div
+          class="wrapper-m"
+          style="
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform-style: preserve-3d;
+            opacity: 1;
+          "
+        >
+          <div class="cta-wrapper">
+            <div class="black-bg">
+              <h2 class="heading l c-t-neutral-10">
+                Get in touch with an expert
+              </h2>
+              <p class="body-text m c-t-neutral-10">
+                We want to give you the best service possible by delivering
+                trustworthy and reliable workmanship. We’re passionate about
+                taking care of those around us — reach out to us today to get
+                started.
+              </p>
+              <div class="ctas-wrapper">
+                <a href="/contact-us" class="button medium hover-white w-button"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line-accent absolute">
+        <img
+          src="assets/6407c8533a65212a25aa8406_accent line left.svg"
+          loading="lazy"
+          alt=""
+        />
+      </div>
+    </div>
+    <footer class="footer-2 dark">
+      <div class="container">
+        <div class="w-layout-grid footer-grid-2">
+          <div id="w-node-_0fac2311-18b8-9ad0-ceb3-863100d983f5-38eac67c">
+            <a
+              href="/"
+              aria-current="page"
+              class="footer-logo-2 w-nav-brand w--current"
+              ><img
+                src="assets/64090cc9f340511c00d636bf_Canyon Logo White (1).png"
+                height=""
+                alt=""
+                sizes="(max-width: 479px) 93vw, 287.99481201171875px"
+                srcset="
+                  assets/64090cc9f340511c00d636bf_Canyon Logo White-p-500.png   500w,
+                  assets/64090cc9f340511c00d636bf_Canyon Logo White-p-800.png   800w,
+                  assets/64090cc9f340511c00d636bf_Canyon Logo White-p-1080.png 1080w,
+                  assets/64090cc9f340511c00d636bf_Canyon Logo White-p-1600.png 1600w,
+                  assets/64090cc9f340511c00d636bf_Canyon Logo White (1).png        1633w
+                "
+                class="brand-logo-image white"
+            /></a>
+            <ul role="list" class="w-list-unstyled">
+              <li class="vertical-menu-list-item">
+                <a
+                  href="tel:+14032581505"
+                  class="vertical-menu-link color-inverse"
+                  >(403) 258 1505</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a
+                  href="https://www.google.com/maps?rlz=1C5GCEM_enCA1014CA1014&amp;q=Canyon+Plumbing+%26+Heating+Ltd&amp;gsas=1&amp;lsig=AB86z5X21PiBDFMy7JK80KJwkqeA&amp;biw=2560&amp;bih=1304&amp;dpr=1&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ved=2ahUKEwj65KK6vZX9AhV1NX0KHSOqD9QQ_AUoAXoECAEQAw"
+                  target="_blank"
+                  class="vertical-menu-link color-inverse"
+                  >3185 114 Avenue Southeast, <br />Calgary, AB T2Z 3X2</a
+                >
+              </li>
+            </ul>
+            <div class="sm-icons-wrapper">
+              <a
+                href="https://www.facebook.com/canyonpb"
+                target="_blank"
+                class="sm-icon-link w-inline-block"
+                ><div class="social-media-icon w-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="1em"
+                    height="1em"
+                    style="
+                      -ms-transform: rotate(360deg);
+                      -webkit-transform: rotate(360deg);
+                      transform: rotate(360deg);
+                    "
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 1024 1024"
+                  >
+                    <path
+                      d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6c44.2 0 82.1 3.3 93.2 4.8v107.9z"
+                      fill="#ffffff"
+                    ></path>
+                  </svg></div></a
+              ><a
+                href="https://instagram.com/canyonph?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                class="sm-icon-link w-inline-block"
+                ><div class="social-media-icon w-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="1em"
+                    height="1em"
+                    style="
+                      -ms-transform: rotate(360deg);
+                      -webkit-transform: rotate(360deg);
+                      transform: rotate(360deg);
+                    "
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 1024 1024"
+                  >
+                    <path
+                      d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"
+                      fill="#ffffff"
+                    ></path>
+                  </svg></div></a
+              ><a
+                href="https://www.google.com/search?q=Canyon+Plumbing+%26+Heating+Ltd&amp;rlz=1C5CHFA_enCA947CA947&amp;ei=TR0nZL6PD_mA0PEPoeKX0Ao&amp;ved=0ahUKEwj-6e-23Yb-AhV5ADQIHSHxBaoQ4dUDCA8&amp;uact=5&amp;oq=Canyon+Plumbing+%26+Heating+Ltd&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIOCC4QgAQQxwEQrwEQ6gQyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yAggmMhkILhCABBDHARCvARDqBBDcBBDeBBDgBBgBOgoIABBHENYEELADOgoIABCKBRCwAxBDOhAILhCKBRDHARDRAxCwAxBDSgQIQRgAUM8EWM8EYPoLaAFwAXgAgAGoAYgBqAGSAQMwLjGYAQCgAQKgAQHIAQrAAQHaAQYIARABGBQ&amp;sclient=gws-wiz-serp#lrd=0x53717741ef39bcfb:0xf267bce19f89b653,1"
+                target="_blank"
+                class="sm-icon-link w-inline-block"
+                ><div class="g">G</div></a
+              >
+            </div>
+          </div>
+          <div>
+            <div class="vertical-menu-title c-t-neutral-10">GENERAL</div>
+            <ul role="list" class="w-list-unstyled">
+              <li class="vertical-menu-list-item">
+                <a href="/our-services" class="vertical-menu-link color-inverse"
+                  >Our Services</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a
+                  href="/products-suppliers"
+                  class="vertical-menu-link color-inverse"
+                  >Products/Suppliers</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a href="/showroom" class="vertical-menu-link color-inverse"
+                  >Showroom</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="vertical-menu-title c-t-neutral-10">ABOUT</div>
+            <ul role="list" class="w-list-unstyled">
+              <li class="vertical-menu-list-item">
+                <a href="/about-us" class="vertical-menu-link color-inverse"
+                  >About Us</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a href="/our-team" class="vertical-menu-link color-inverse"
+                  >Our Team</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a href="/careers" class="vertical-menu-link color-inverse"
+                  >Careers</a
+                >
+              </li>
+              <li class="vertical-menu-list-item">
+                <a href="/contact-us" class="vertical-menu-link color-inverse"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="vertical-menu-title c-t-neutral-10">ADDITIONAL</div>
+            <ul role="list" class="w-list-unstyled">
+              <li class="vertical-menu-list-item">
+                <a href="/blog" class="vertical-menu-link color-inverse"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom-2 color-inverse">
+          <div class="body-text s c-t-neutral-10">
+            © <span id="year">2024</span> Canyon Plumbing &amp; Heating Ltd. All
+            rights reserved.
+          </div>
+          <div>
+            <a href="/privacy-policy" class="nav-link color-inverse"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
