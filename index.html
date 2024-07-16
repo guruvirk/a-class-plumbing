@@ -13,12 +13,19 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     /> -->
-    
 
     <!-- Link script.js -->
-      <script src="script.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
+    <div class="loader">
+      <div class="loader-background"></div>
+      <img
+        src="https://assets.website-files.com/63b49d09db8aee757c7c732e/63da9ee6a87657999bd36d66_Canyon%20Logo.png"
+        alt="Canyon Logo"
+        class="brand loader-brand"
+      />
+    </div>
     <div class="main">
       <div
         data-collapse="medium"
@@ -43,19 +50,25 @@
             alt="Canyon Logo"
             class="brand-logo-image"
         /></a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+        </button>
       </div>
-      <nav class="navbar-menu dark w-nav-menu">
+
+      <nav>
         <ul>
           <li class="dropdown">
-            <a href="#">Our Services <i class="fas fa-chevron-down"></i></a>
+            <a  href="our-services.html" target="_blank"
+              >Our Services </a> <i class="fas fa-chevron-down"></i
+                >
             <ul class="dropdown-menu">
               <li>
-                <a class="nav-text nav-link s-m-r-0" href="#"
+                <a class="nav-text nav-link s-m-r-0" href="services/furnace-air-conditioning.html"
                   >Furnace & Air Conditioning</a
                 >
               </li>
               <li>
-                <a class="nav-text nav-link s-m-r-0" href="#"
+                <a class="nav-text nav-link s-m-r-0" href=""
                   >Service & Maintenance</a
                 >
               </li>
@@ -81,8 +94,8 @@
           </li>
           <li class="dropdown">
             <a href="#"
-              >Products/Suppliers <i class="fas fa-chevron-down"></i
-            ></a>
+              >Products/Suppliers </a><i class="fas fa-chevron-down"></i
+                >
             <ul class="dropdown-menu">
               <li>
                 <a class="nav-text nav-link s-m-r-0" href="#">Plumbing</a>
@@ -94,7 +107,7 @@
             <a href="#">Showroom </a>
           </li>
           <li class="dropdown">
-            <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+            <a href="#">About Us </a><i class="fas fa-chevron-down"></i>
             <ul class="dropdown-menu">
               <li>
                 <a class="nav-text nav-link s-m-r-0" href="#">About Us</a>
@@ -127,8 +140,10 @@
                 plumbing, furnace and air conditioning services stand a cut
                 above the rest.
               </p>
-              <div class="ctas-wrapper">
-                <a href="#" class="button medium w-button">View Services</a>
+              <div class="ctas-wrapper" href="our-services.html">
+                <a href="our-services.html" class="button medium w-button"
+                  >View Services</a
+                >
               </div>
             </div>
             <div class="grid-wrapper">
@@ -776,11 +791,11 @@
                     <p class="body-text m">
                       A Class Plumbing has been servicing our boiler heating
                       system since it was installed by A Class Plumbing 11 years
-                      ago. &nbsp;A-Class Plumbing's service department is second to none,
-                      in that they have responded to our servicing needs
-                      promptly and on occasion going beyond what was expected in
-                      order to ensure our heating system continues to provide
-                      reliable heat.<br /><br />‍
+                      ago. &nbsp;A-Class Plumbing's service department is second
+                      to none, in that they have responded to our servicing
+                      needs promptly and on occasion going beyond what was
+                      expected in order to ensure our heating system continues
+                      to provide reliable heat.<br /><br />‍
                     </p>
                     <div class="avatar-wrapper horizontal">
                       <div class="avatar-label-text-2">
@@ -840,8 +855,8 @@
                       and they were very hard working, efficient, personable and
                       helpful. &nbsp;They came up with innovative ways to
                       replace the pipe so that there was minimal damage to walls
-                      so I did not have to have new drywall work done.A-Class Plumbing's
-                      quote was very very reasonable.
+                      so I did not have to have new drywall work done.A-Class
+                      Plumbing's quote was very very reasonable.
                     </p>
                     <div class="avatar-wrapper horizontal" aria-hidden="true">
                       <div class="avatar-label-text-2" aria-hidden="true">
@@ -1091,13 +1106,11 @@
                 >
               </li>
               <li class="vertical-menu-list-item">
-                <span
-                  class="vertical-menu-link color-inverse"
-                  >Canada <br /></span
-                >
+                <span class="vertical-menu-link color-inverse"
+                  >Canada <br
+                /></span>
               </li>
             </ul>
-            
           </div>
           <div>
             <div class="vertical-menu-title c-t-neutral-10">GENERAL</div>
@@ -1159,8 +1172,7 @@
         </div>
         <div class="footer-bottom-2 color-inverse">
           <div class="body-text s c-t-neutral-10">
-            © <span id="year">2024</span> A Class Plumbing. All
-            rights reserved.
+            © <span id="year">2024</span> A Class Plumbing. All rights reserved.
           </div>
           <div>
             <a href="/privacy-policy" class="nav-link color-inverse"
