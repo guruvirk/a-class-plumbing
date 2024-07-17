@@ -110,77 +110,114 @@
         </ul>
       </nav>
     </header>
-    <div class="hero-section hero-gradient">
-      <div class="accent absolute color round-right"></div>
-      <div class="container">
-        <div class="st-p-y-64">
-          <div class="w-layout-grid hero-grid">
-            <div class="wrapper-l st-p-0">
-              <h1 class="heading xl">
-                Get inspired for your next home build or renovation
-              </h1>
-              <p class="body-text l s-m-r-24">
-                Visit our showroom to bring your dream interior to life! Our
-                talented Interior Designers are experienced in providing
-                creative solutions to make any home build or renovation a
-                reality. Appointments are necessary for new home builds,
-                renovations and installations, while drop in visits from
-                supply-only customers are welcome at any time.
-              </p>
-            </div>
-            <div
-              id="w-node-fe9ffae8-44f4-35cf-b408-7563cbcc9990-d8e59074"
-              class="grid-wrapper"
-            >
-              <div class="grid-multi-image s-m-r-24 s-m-t-64">
-                <div
-                  id="w-node-fe9ffae8-44f4-35cf-b408-7563cbcc9992-d8e59074"
-                  class="rounded-wrapper"
-                >
-                  <img
-                    src="assets/63dc42d742a7744b1ae220ae_black-faucet-with-a-steel-sink-in-a-stylish-modern-2022-04-22-07-02-15-utc%20(1).jpg"
-                    loading="lazy"
-                    alt="Kitchen sink on the island "
-                    class="image-in-grid"
-                  />
-                </div>
-                <div
-                  id="w-node-fe9ffae8-44f4-35cf-b408-7563cbcc9996-d8e59074"
-                  class="rounded-wrapper"
-                >
-                  <img
-                    src="assets/63dd5806952fef9b932a4334_close-up-of-elegant-sink-2021-10-21-02-43-55-utc_1.jpg"
-                    loading="lazy"
-                    alt="Kitchen sink on the island "
-                    class="image-in-grid"
-                  />
-                </div>
-              </div>
-              <div class="grid-multi-image">
-                <div
-                  id="w-node-fe9ffae8-44f4-35cf-b408-7563cbcc999f-d8e59074"
-                  class="rounded-wrapper longer"
-                >
-                  <div class="ic-wrapper-absolute big">
-                    <img
-                      src="assets/round text.svg"
-                      loading="lazy"
-                      alt=""
-                    />
+    <div style="margin-top: 100px;" class="feature-grid-section">
+        <div class="line-accent absolute bottom mobile-hide">
+          <img
+            src="../assets/6407c8533a65212a25aa8406_accent%20line%20left.svg"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <div
+            class="wrapper-m s-m-t-0"
+            style="
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+              opacity: 1;
+            "
+          >
+            <div class="form-wrapper-quote">
+              <div class="email-form w-embed w-script">
+                <div class="form-contact-us">
+                  <div class="form-container">
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                      <label for="firstName">First Name:</label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                      /><br /><br />
+  
+                      <label for="lastName">Last Name:</label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                      /><br /><br />
+  
+                      <label for="email">Email:</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                      /><br /><br />
+  
+                      <label for="phone">Phone:</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                      /><br /><br />
+  
+                      <label for="address">Address of Service:</label>
+                      <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                        required
+                      ></textarea
+                      ><br /><br />
+  
+                      <label for="message">Tell Us All About It:</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        required
+                      ></textarea
+                      ><br /><br />
+  
+                      <label for="startDate">Desired Start Date:</label>
+                      <input
+                        type="date"
+                        id="startDate"
+                        name="startDate"
+                        required
+                      /><br /><br />
+  
+                      <label>What Time to Start:</label><br />
+                      <input
+                        type="radio"
+                        id="morning"
+                        name="startTime"
+                        value="Morning"
+                        required
+                      />
+                      <label for="morning">Morning</label><br />
+                      <input
+                        type="radio"
+                        id="evening"
+                        name="startTime"
+                        value="Evening"
+                        required
+                      />
+                      <label for="evening">Evening</label><br /><br />
+  
+                      <button type="submit">Submit</button>
+                    </form>
                   </div>
-                  <img
-                    src="assets/63e5897ea336604d8f2c32be_beazy-1MZ6z3lf690-unsplash-p-800.jpg"
-                    loading="lazy"
-                    alt="Black bathroom with white sink"
-                    class="image-in-grid"
-                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     <footer style="margin-top: 9rem;" class="footer-2 dark">
       <div class="container">
          
