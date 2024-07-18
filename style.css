@@ -289,7 +289,7 @@ nav .dropdown:hover .dropdown-menu {
   line-height: 5rem;
 }
 .navbar-menu-right {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   display: flex;
 }
@@ -3870,7 +3870,7 @@ blockquote {
   display: flex;
 }
 .navbar-menu-right {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   display: flex;
 }
@@ -7863,7 +7863,7 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   .menu-button.color-inverse.w--open {
     background-color: #f9a01b;
   }
-  .navbar-menu-right {
+  /* .navbar-menu-right {
     z-index: -5000;
     text-align: center;
     background-color: #fff;
@@ -7872,7 +7872,7 @@ html.w-mod-js [data-ix="tooltip-hover"] {
     padding-right: 16px;
     display: none;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.19);
-  }
+  } */
   .navbar-menu-mobile {
     display: block;
   }
