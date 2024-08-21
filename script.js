@@ -185,7 +185,6 @@ function submitForm(event) {
   const startTime = document.querySelector(
     'input[name="startTime"]:checked'
   ).value;
-  const apikey = "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"
 
   const html = `
       <h4>Contact - A Class Plumbing.</h4>
@@ -219,7 +218,7 @@ function submitForm(event) {
     headers: {
       "Content-Type": "application/json",
       "api-key":
-        `${apikey}`,
+        "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",
     },
     body: JSON.stringify(data),
   })
