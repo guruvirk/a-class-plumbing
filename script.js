@@ -198,7 +198,6 @@ function submitForm(event) {
       <br>
   `;
   const emailkey = document.getElementById("emailkey").innerHTML;
-  debugger
   const data = {
     sender: {
       name: "A Class Plumbing",
