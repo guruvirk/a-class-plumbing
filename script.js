@@ -106,74 +106,71 @@ document.addEventListener("DOMContentLoaded", function () {
   //       });
   //   });
 
- 
-
   // Initialize slider
   showSlides();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('nav ul');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
 
-  menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
   });
- 
 
-  const dropdownToggles = document.querySelectorAll('.dropdown > a ');
+  const dropdownToggles = document.querySelectorAll(".dropdown > a ");
 
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            // e.preventDefault(); // Prevent default anchor behavior if necessary
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      // e.preventDefault(); // Prevent default anchor behavior if necessary
 
-            // Close other open dropdowns
-            closeOtherDropdowns();
+      // Close other open dropdowns
+      closeOtherDropdowns();
 
-            const dropdownMenu = this.nextElementSibling; // Get the dropdown menu
-            dropdownMenu.classList.toggle('dropdown'); // Toggle the 'dropdown' class to show/hide
-        });
+      const dropdownMenu = this.nextElementSibling; // Get the dropdown menu
+      dropdownMenu.classList.toggle("dropdown"); // Toggle the 'dropdown' class to show/hide
     });
+  });
 
-    // Function to close other dropdowns
-    function closeOtherDropdowns() {
-        dropdownToggles.forEach(toggle => {
-            const dropdownMenu = toggle.nextElementSibling;
-            if (dropdownMenu !== null && dropdownMenu.classList.contains('dropdown')) {
-                dropdownMenu.classList.remove('dropdown');
-            }
-        });
+  // Function to close other dropdowns
+  function closeOtherDropdowns() {
+    dropdownToggles.forEach((toggle) => {
+      const dropdownMenu = toggle.nextElementSibling;
+      if (
+        dropdownMenu !== null &&
+        dropdownMenu.classList.contains("dropdown")
+      ) {
+        dropdownMenu.classList.remove("dropdown");
+      }
+    });
+  }
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", function (e) {
+    // Close dropdowns if click is outside any dropdown
+    if (!e.target.closest(".dropdown")) {
+      closeOtherDropdowns();
     }
 
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-      // Close dropdowns if click is outside any dropdown
-      if (!e.target.closest('.dropdown')) {
-          closeOtherDropdowns();
+    // Check if the clicked element is a link inside a dropdown
+    if (e.target.closest(".dropdown-item > a")) {
+      e.preventDefault(); // Prevent the default link behavior
+      let href = e.target.closest(".dropdown-item > a").getAttribute("href");
+      if (href) {
+        window.open(href, "_blank"); // Open link in a new tab
       }
-  
-      // Check if the clicked element is a link inside a dropdown
-      if (e.target.closest('.dropdown-item > a')) {
-          e.preventDefault(); // Prevent the default link behavior
-          let href = e.target.closest('.dropdown-item > a').getAttribute('href');
-          if (href) {
-              window.open(href, '_blank'); // Open link in a new tab
-          }
-      }
+    }
   });
-  
+
   function closeOtherDropdowns() {
-      // Implement your logic to close other dropdowns here
-      // For example:
-      let openDropdowns = document.querySelectorAll('.dropdown.show');
-      openDropdowns.forEach(function(dropdown) {
-          dropdown.classList.remove('show');
-      });
+    // Implement your logic to close other dropdowns here
+    // For example:
+    let openDropdowns = document.querySelectorAll(".dropdown.show");
+    openDropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove("show");
+    });
   }
-  
-
 });
-
 
 function submitForm(event) {
   event.preventDefault();
@@ -185,7 +182,10 @@ function submitForm(event) {
   const address = document.getElementById("address").value;
   const message = document.getElementById("message").value;
   const startDate = document.getElementById("startDate").value;
-  const startTime = document.querySelector('input[name="startTime"]:checked').value;
+  const startTime = document.querySelector(
+    'input[name="startTime"]:checked'
+  ).value;
+  const apikey = "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"
 
   const html = `
       <h4>Contact - A Class Plumbing.</h4>
@@ -200,48 +200,40 @@ function submitForm(event) {
   `;
 
   const data = {
-      sender: {
-          name: "Name",
-          email: "info@domain.ca",
+    sender: {
+      name: "A Class Plumbing",
+      email: "aclassplumbing99@gmail.com",
+    },
+    to: [
+      {
+        email: "karanmishra000@gmail.com",
+        name: "Karan Mishra",
       },
-      to: [
-          {
-              email: "to@domain.ca",
-              name: "A Class Plumbing Admin",
-          },
-      ],
-      subject: "New Contact Request",
-      htmlContent: html,
+    ],
+    subject: "New Contact Request",
+    htmlContent: html,
   };
 
   fetch("https://api.brevo.com/v3/smtp/email", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-          "api-key": "api-key",
-      },
-      body: JSON.stringify(data),
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "api-key":
+        `${apikey}`,
+    },
+    body: JSON.stringify(data),
   })
-  .then(response => response.json())
-  .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       console.log("Email sent:", result);
-      // Assuming you have an endpoint to handle database insertion
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", "insert-contact.php", true);
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-              console.log("Contact saved to database.");
-              window.location.href = "success-contact.html";
-          } else if (xhr.readyState === 4) {
-              console.error("Failed to save contact to database.");
-              window.location.href = "fail.html";
-          }
-      };
-      xhr.send(`firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&address=${encodeURIComponent(address)}&message=${encodeURIComponent(message)}&startDate=${encodeURIComponent(startDate)}&startTime=${encodeURIComponent(startTime)}`);
-  })
-  .catch(error => {
+      if (result.messageId) {
+        window.location.href = "success-contact.html";
+      } else {
+        window.location.href = "fail.html";
+      }
+    })
+    .catch((error) => {
       console.error("Error:", error);
       window.location.href = "fail.html";
-  });
+    });
 }
