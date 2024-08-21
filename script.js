@@ -175,16 +175,16 @@ document.addEventListener("DOMContentLoaded", function () {
 function submitForm(event) {
   event.preventDefault();
 
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const address = document.getElementById("address").value;
-  const message = document.getElementById("message").value;
-  const startDate = document.getElementById("startDate").value;
+  const firstName = document.getElementById("firstName")?.value || '';
+  const lastName = document.getElementById("lastName")?.value || '';
+  const email = document.getElementById("email")?.value || '';
+  const phone = document.getElementById("phone")?.value || '';
+  const address = document.getElementById("address")?.value || '';
+  const message = document.getElementById("message")?.value || '';
+  const startDate = document.getElementById("startDate")?.value || '';
   const startTime = document.querySelector(
     'input[name="startTime"]:checked'
-  ).value;
+  )?.value || '';
 
   const html = `
       <h4>Contact - A Class Plumbing.</h4>
@@ -197,7 +197,8 @@ function submitForm(event) {
       <p><b>Time to Start: </b> ${startTime}</p>
       <br>
   `;
-
+  const emailkey = document.getElementById("emailkey").innerHTML;
+  debugger
   const data = {
     sender: {
       name: "A Class Plumbing",
@@ -205,8 +206,8 @@ function submitForm(event) {
     },
     to: [
       {
-        email: "karanmishra000@gmail.com",
-        name: "Karan Mishra",
+        email: "harpalkhara123@gmail.com",
+        name: "Harpal Khara",
       },
     ],
     subject: "New Contact Request",
@@ -217,8 +218,7 @@ function submitForm(event) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "api-key":
-        "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",
+      "api-key": emailkey,
     },
     body: JSON.stringify(data),
   })
