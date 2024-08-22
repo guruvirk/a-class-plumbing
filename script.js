@@ -198,6 +198,7 @@ function submitForm(event) {
       <br>
   `;
   const emailkey = document.getElementById("emailkey").innerHTML;
+  const key = atob(emailkey);
   const data = {
     sender: {
       name: "A Class Plumbing",
@@ -217,7 +218,7 @@ function submitForm(event) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "api-key": emailkey,
+      "api-key": key,
     },
     body: JSON.stringify(data),
   })
