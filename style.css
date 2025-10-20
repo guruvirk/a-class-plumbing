@@ -130,6 +130,10 @@ nav .dropdown:hover .dropdown-menu {
   color: #333 !important;
 }
 
+.black-text {
+  color: #333 !important;
+}
+
 .navbar-menu-wrapper {
   z-index: 5;
   width: auto;
@@ -573,8 +577,8 @@ nav .dropdown:hover .dropdown-menu {
 .wrapper-m {
   flex-direction: column;
   align-items: center;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   position: relative;
 }
@@ -3434,8 +3438,8 @@ blockquote {
 .wrapper-m {
   flex-direction: column;
   align-items: center;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   position: relative;
 }
@@ -10849,8 +10853,8 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   }
 
   .wrapper-m {
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 
   .l-g-3-col {

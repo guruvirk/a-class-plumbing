@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Class Plumbing</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="script.js"></script>
+  <meta name="title" content="A Class Plumbing" />
+  <meta name="description"
+    content="A Class Plumbing offers top-notch plumbing services in Calgary. Our services include maintenance, renovations, and custom home plumbing solutions." />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:title" content="A Class Plumbing" />
+  <meta property="og:description"
+    content="A Class Plumbing offers top-notch plumbing services in Calgary. Our services include maintenance, renovations, and custom home plumbing solutions." />
+  <meta property="og:url" content="https://aclassplumbing.ca" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://aclassplumbing.ca/assets/Studio-Project.png" />
+
+  <meta name="twitter:title" content="A Class Plumbing" />
+  <meta name="twitter:description"
+    content="A Class Plumbing offers top-notch plumbing services in Calgary. Our services include maintenance, renovations, and custom home plumbing solutions." />
+  <meta name="twitter:image" content="https://aclassplumbing.ca/assets/Studio-Project.png" />
+  <meta name="twitter:card"
+    content="🇨🇦 A Class Plumbing offers top-notch plumbing services in Calgary. Our services include maintenance, renovations, and custom home plumbing solutions. #Calgary" />
+
+  <link rel="canonical" href="https://aclassplumbing.ca" />
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <style>
+    /* Put the gradient on a pseudo-element so it doesn't darken the markup inside */
+    .hero-section {
+      position: relative;
+      background: url('assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg') center/cover no-repeat;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* top:0; right:0; bottom:0; left:0; */
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Ensure content sits above the gradient */
+    .hero-section .container,
+    .hero-section .wrapper-l,
+    .hero-section>.container>.wrapper-l>div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .l-g-4-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+      height: 420px;
+      align-content: start;
+    }
+
+    .second-row {
+      margin-top: 12px;
+    }
+
+    /* Testimonials horizontal scroll */
+    .testimonials {
+      padding: 32px 0;
+      background: #fff;
+    }
+
+    .testimonials .section-head {
+      text-align: center;
+      color: #f9a01b;
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+
+    .testimonials-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8px 14px;
+    }
+
+    .testimonials-list {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      gap: 18px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      /* Firefox */
+      scrollbar-color: #f9a01b rgba(0, 0, 0, 0.06);
+      /* Firefox: thumb then track */
+    }
+
+    .testimonial-card {
+      flex: 0 0 320px;
+      /* card width */
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(11, 14, 27, 0.06);
+      padding: 18px;
+      scroll-snap-align: start;
+      color: #222;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #555;
+      flex: 0 0 36px;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 14px;
+      color: #111;
+    }
+
+    .testimonial-rating {
+      color: #ffb342;
+      font-weight: 700;
+      text-align: start;
+      font-size: 14px;
+    }
+
+    .testimonial-text {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.45;
+      margin-top: 4px;
+      flex: 1;
+    }
+
+    .testimonials-list::-webkit-scrollbar {
+      height: 6px;
+      /* thinner horizontal scrollbar */
+    }
+
+    .testimonials-list::-webkit-scrollbar-track {
+      background: transparent;
+      /* <-- change to #fff to make track white */
+    }
+
+    .testimonials-list::-webkit-scrollbar-thumb {
+      background: #f9a01b;
+      border-radius: 8px;
+      border: 2px solid rgba(0, 0, 0, 0.02);
+    }
+
+    /* optional: slightly darker on hover for affordance */
+    .testimonials-list::-webkit-scrollbar-thumb:hover {
+      background: #e38f13;
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-card {
+        flex: 0 0 88%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .l-g-4-col {
+        grid-template-columns: repeat(4, 1fr);
+        height: 220px;
+      }
+
+      .second-row {
+        margin-top: 0;
+      }
+
+      .hero-section {
+        position: relative;
+        background: url('assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg') center/cover no-repeat;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+      role="banner" class="navbar w-nav"></div>
+  </div>
+  <header class="container-fluid container-navbar">
+    <div class="navbar-menu-wrapper">
+      <a href="/" aria-current="page" class="brand-logo w-nav-brand w--current" aria-label="home"><img
+          src="assets/Studio-Project.png" height="" alt="a Class Logo" class="brand-logo-image" /></a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="our-services.html" style="padding-right: 2px;">Our Services</a><i style="padding-right: 20px;"
+            class="fas fa-chevron-down"></i>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="nav-text nav-link s-m-r-0" href="services/service-and-maintenance.html">Service &
+                Maintenance</a>
+            </li>
+            <li>
+              <a class="nav-text nav-link s-m-r-0" href="services/renovations-and-poly-b-replacement.html">Renovations &
+                Poly B Replacement</a>
+            </li>
+            <li>
+              <a class="nav-text nav-link s-m-r-0" href="services/residential-contract-plumbing.html">Residential
+                Contract Plumbing</a>
+            </li>
+
+            <li>
+              <a class="nav-text nav-link s-m-r-0" href="services/custom-homes.html">Custom Homes</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="products/products-suppliers.html">Products/Suppliers </a>
+        </li>
+        <li class="dropdown">
+          <a href="showroom.html">Showroom </a>
+        </li>
+
+        <li style="padding-left: 20px; padding-right: 20px;" class="navbar-menu-right">
+          <a class="button medium w-button" href="contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <div class="hero-section hero-gradient first-section"
+    style="background: url('assets/6425eb10b756842b5f7dcd72_plumber-in-uniform.jpg') center/cover no-repeat;">
+    <div class="container">
+      <div class="wrapper-l st-p-0" style="padding-top:64px;padding-bottom:64px;">
+        <div style="max-width:880px; color:#fff;">
+          <h1 class="heading l" style="text-align: start; font-size: 20px;color:#fff; text-transform:uppercase;">YOUR
+            GO-TO EXPERTS FOR QUICK, TRUSTED PLUMBING &AMP; HEATING.
+          </h1>
+          <p class="body-text l s-m-r-24" style="color:#fff; opacity:0.95;">
+            Trusted by hundreds of homeowners for expert plumbing, heating, and HVAC repairs done right the first time.
+          </p>
+          <div class="ctas-wrapper" style="margin-top:18px;">
+            <a href="tel:4039516092" class="button medium w-button"
+              style="background-color:#ffb342;border-radius:20px;padding:14px 22px;color:#0e0f11;font-weight:700;">
+              <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951 6092
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- intro paragraph -->
+  <section style="background:#fff;padding:32px 0;">
+    <div class="container">
+      <p class="body-text l center-content" style="max-width:900px; margin:0 auto; font-weight:600;">
+        Since 2011, we’ve been proudly serving our community with top-quality plumbing and heating solutions. From leaky
+        pipes to full HVAC installs, our expert technicians handle every job with care, professionalism, and a focus on
+        lasting comfort for your home.
+      </p>
+    </div>
+  </section>
+
+  <!-- services orange band -->
+  <section style="background:#f9a01b;padding:15px 0;color:#fff;">
+    <div class="container">
+      <h2 class="heading l center-content" style="font-size: 20px;color:#fff;">SERVICES WE OFFER
+      </h2>
+      <div class="l-g-4-col">
+        <div class="card card-icon" style="background:transparent;border-radius:12px;padding: 10px 5px 5px 5px;">
+          <div style="font-size:28px;margin-bottom:12px;"><i class="fas fa-wrench"></i></div>
+          <h3 class="heading s" style="color:#fff;font-size:16px;">Service &amp; Maintenance</h3>
+          <p class="body-text s" style="color:#fff;opacity:0.95;">Leaky faucets, noisy furnaces, tankless water heater
+            maintenance and repairs to keep your home running smoothly.</p>
+        </div>
+        <div class="card card-icon" style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;;">
+          <div style="font-size:28px;margin-bottom:12px;"><i class="fas fa-tools"></i></div>
+          <h3 class="heading s" style="color:#fff;font-size:16px;">Renovations &amp; Poly B Replacement</h3>
+          <p class="body-text s" style="color:#fff;opacity:0.95;">Updating kitchens or bathrooms? We replace old,
+            problem-prone Poly B piping and handle full renovations.</p>
+        </div>
+        <div class="card card-icon" style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;;">
+          <div class="second-row" style="font-size:28px;margin-bottom:12px;"><i class="fas fa-hammer"></i></div>
+          <h3 class="heading s" style="color:#fff;font-size:16px;">Residential Contract Plumbing</h3>
+          <p class="body-text s" style="color:#fff;opacity:0.95;">Full plumbing, HVAC and hydronic heating for premium
+            homes — expert design and installation.</p>
+        </div>
+        <div class="card card-icon" style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;;">
+          <div class="second-row" style="font-size:28px;margin-bottom:12px;"><i class="fas fa-home"></i></div>
+          <h3 class="heading s" style="color:#fff;font-size:16px;">Custom Homes</h3>
+          <p class="body-text s" style="color:#fff;opacity:0.95;">New home builds, townhouses — we install plumbing
+            systems and fixtures tailored to your space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- request estimate -->
+  <section style="padding:15px 0;background:#fff;">
+    <div class="container" style="text-align: center;">
+      <h2 class="heading l center-content" style="font-size: 20px; color:#f9a01b; margin-top: 25px;">REQUEST A FREE
+        ESTIMATE:
+      </h2>
+      <h2 class="heading l center-content" style="font-size: 20px; color:#f9a01b; margin-top: 20px;">
+        <a href="tel:4039516092"
+          style="background:#ffb342;padding:10px 16px;border-radius:999px;color:#fff;margin-left:10px;font-weight:700;">(403)
+          951 6092</a>
+      </h2>
+    </div>
+    <h2 class="heading l center-content" style="font-size: 20px; color:#f9a01b; margin-top: 50px;">WHY
+      CHOOSE US
+    </h2>
+    <ul
+      style="list-style:disc; padding-left: 50px; padding-right: 50px; margin:0 auto; color:#3c404b; font-size: 14px; font-weight:600;">
+      <li>Heating &amp; Cooling Experts: From furnace repair to tankless water heater installation.</li>
+      <li>Residential &amp; Commercial Ready: No job too big or small.</li>
+      <li>Eco-Friendly Solutions: Energy-efficient plumbing and HVAC systems.</li>
+      <li>Upfront Pricing: No surprises, no hidden fees.</li>
+    </ul>
+  </section>
+
+  <!-- stats boxes -->
+  <section style="padding:30px 0;background:#fff;">
+    <div class="container" style="display:flex; align-items:stretch;">
+      <div
+        style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-left-radius:28px; border-top-left-radius:28px; padding:15px; text-align:center; color:#fff;">
+        <div style="font-size:16px;font-weight:700;margin-bottom:8px;">YEARS EXPERIENCE</div>
+        <div style="font-size:40px;font-weight:800;line-height:1;">10+</div>
+      </div>
+      <div
+        style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-right-radius:28px; border-top-right-radius:28px; padding:15px; text-align:center; color:#fff;">
+        <div style="font-size:16px;font-weight:700;margin-bottom:8px;">HAPPY CLIENTS</div>
+        <div style="font-size:40px;font-weight:800;line-height:1;">200+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonials heading -->
+  <section style="padding:15px 0;background:#fff;">
+    <div class="container" style="text-align:center;">
+      <h2 class="heading l center-content" style="font-size: 20px; color:#f9a01b; ">TESTIMONIALS
+      </h2>
+      <div class="testimonials-list" id="testimonialsList" aria-live="polite">
+        <!-- testimonial cards rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-2 dark">
+    <div class="container">
+      <div class="footer-bottom-2 color-inverse">
+        <div class="body-text s c-t-neutral-10">
+          <img src="assets/Studio-Project-Dark.png" height="" alt="a Class Logo" class="brand-logo-image" />
+          <br>
+          © <span id="year">2024</span> A Class Plumbing. All rights reserved.
+        </div>
+        <ul style="margin-top: 30px;" role="list" class="w-list-unstyled">
+          <li class="vertical-menu-list-item">
+            <a href="tel:+14039516092" class="vertical-menu-link color-inverse"><i
+                class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951 6092</a>
+          </li>
+          <li class="vertical-menu-list-item">
+            <a href="mailto:info@aclassplumbing.ca" class="vertical-menu-link color-inverse"><i
+                class="fa-solid fa-envelope"></i>&nbsp;&nbsp;info@aclassplumbing.ca</a>
+          </li>
+          <li class="vertical-menu-list-item">
+            <a href="https://maps.app.goo.gl/Mc93ndy1fhmnX6cG7" target="_blank"
+              class="vertical-menu-link color-inverse"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;203 Homestead
+              Dr. Northeast, <br />Calgary, T3 J2G 6</a>
+          </li>
+        </ul>
+        <div>
+          <ul style="margin-top: 15px;" role="list" class="w-list-unstyled">
+            <li class="vertical-menu-list-item">
+              <a href="services/service-and-maintenance.html" class="nav-link color-inverse">Service & Maintenance</a>
+            </li>
+            <li class="vertical-menu-list-item">
+              <a href="services/renovations-and-poly-b-replacement.html" class="nav-link color-inverse">Renovations &
+                Poly B Replacement</a>
+            </li>
+            <li class="vertical-menu-list-item">
+              <a href="services/residential-contract-plumbing.html" class="nav-link color-inverse">Residential Contract
+                Plumbing</a>
+            </li>
+            <li class="vertical-menu-list-item">
+              <a href="services/custom-homes.html" class="nav-link color-inverse">Custom Homes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Sample reviews array derived from the Google Business link (anonymized).
+    // Replace or augment these with real review data if you fetch it server-side.
+    const reviews = [
+      {
+        author: "Gaudi Louie",
+        rating: 5,
+        text: "Excellent service! They quickly fixed my leaking sink after I called them. They arrived promptly, offered a fair price, and provided excellent customer service. I highly recommend them for any plumbing needs!",
+        date: "2024-06-11"
+      },
+      {
+        author: "SAHIB DIGOH",
+        rating: 5,
+        text: "Excellent work if anyone want any work done related to plumbing please contact a class plumbing ltd they can fix any problem regarding to plumbing!",
+        date: "2025-03-28"
+      },
+      {
+        author: "Virpal Sandhu",
+        rating: 5,
+        text: "I recently contacted A class plumbing for a leak repair, and I was very impressed with their service. The technician arrived on time, was professional, and quickly diagnosed the issue...",
+        date: "2024-11-09"
+      },
+      {
+        author: "Shamsher Waraich",
+        rating: 5,
+        text: "I really Appreciate with A class plumbing ltd …very experienced ,,they did all work according to city codes requirements and building plan..Thanks all team",
+        date: "2025-01-15"
+      },
+      {
+        author: "Safina Ehsan",
+        rating: 5,
+        text: "I'm 100% satisfied from their work ,they're doing excellent job in Calgary, highly recommend",
+        date: "2025-05-02"
+      }
+    ];
+
+    function renderTestimonials(listEl, items) {
+      listEl.innerHTML = "";
+      if (!items || items.length === 0) {
+        listEl.innerHTML = "<div class='testimonial-card'>No testimonials available.</div>";
+        return;
+      }
+
+      items.forEach(r => {
+        const card = document.createElement('article');
+        card.className = 'testimonial-card';
+        card.innerHTML = `
+          <div class="testimonial-meta">
+            <div class="testimonial-avatar">${(r.author || "U").slice(0, 1)}</div>
+            <div>
+              <div class="testimonial-author">${r.author}</div>
+              <div class="testimonial-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+            </div>
+          </div>
+          <div class="testimonial-text">${r.text}</div>
+          <div style="font-size:12px;color:#888">${new Date(r.date).toLocaleDateString()}</div>
+        `;
+        listEl.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const listEl = document.getElementById('testimonialsList');
+      renderTestimonials(listEl, reviews);
+    });
+  </script>
+</body>
+
+</html>
