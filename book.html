@@ -79,10 +79,9 @@
     .l-g-4-col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-      margin: 0 auto;
+      margin: auto;
+      margin-top: 40px;
       align-items: start;
-      height: 500px;
       align-content: start;
     }
 
@@ -211,11 +210,18 @@
     .why-choose-us-list {
       list-style: disc;
       font-size: 14px;
+      text-align: start;
     }
 
     .quote-cta-wrapper {
       display: block;
       text-align: center;
+    }
+
+    .single-line-ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     @media (max-width: 480px) {
@@ -227,7 +233,8 @@
     @media (min-width: 992px) {
       .l-g-4-col {
         grid-template-columns: repeat(4, 1fr);
-        height: 200px;
+        margin-top: 20px;
+        margin-bottom: 40px;
       }
 
       .second-row {
@@ -246,9 +253,7 @@
       }
 
       .why-choose-us-list {
-        list-style: none;
         font-size: 16px;
-        ;
       }
 
       .quote-cta-wrapper {
@@ -323,11 +328,10 @@
     <div class="container">
       <div class="wrapper-l st-p-0" style="padding-top:64px;padding-bottom:64px;">
         <div style="max-width:880px; color:#fff;">
-          <h1 class="heading l book-heading" style="text-align: start; color:#fff; text-transform:uppercase;">YOUR
-            GO-TO EXPERTS FOR QUICK, TRUSTED PLUMBING &AMP; HEATING.
-          </h1>
+          <h1 class="heading l book-heading" style="text-align: start; color:#fff; text-transform:uppercase;">YOUR GO-TO
+            EXPERTS FOR QUICK, TRUSTED PLUMBING IN CALGARY</h1>
           <p class="body-text l s-m-r-24" style="color:#fff; opacity:0.95;">
-            Trusted by hundreds of homeowners for expert plumbing, heating, and HVAC repairs done right the first time.
+            Trusted by hundreds of Calgary homeowners for expert plumbing repairs done right the first time.
           </p>
           <div class="ctas-wrapper" style="margin-top:18px;">
             <a href="tel:4039516092" class="button medium w-button"
@@ -343,9 +347,9 @@
   <!-- intro paragraph -->
   <section style="background:#fff;padding:32px 0;">
     <div class="container">
-      <p class="body-text l center-content" style="font-weight:600;">
-        Since 2011, we’ve been proudly serving our community with top-quality plumbing and heating solutions. From leaky
-        pipes to full HVAC installs, our expert technicians handle every job with care, professionalism, and a focus on
+      <p class="body-text l center-content" style="font-weight:600; margin-top: 1rem;">
+        Since 2011, we’ve been proudly serving Calgary with top-quality plumbing solutions. From leaky pipes to full
+        plumbing installations, our expert technicians handle every job with care, professionalism, and a focus on
         lasting comfort for your home.
       </p>
     </div>
@@ -354,34 +358,43 @@
   <!-- services orange band -->
   <section style="background:#f9a01b;padding:15px 0;color:#fff;">
     <div class="container">
-      <h2 class="heading l center-content book-heading" style="color:#fff;">SERVICES WE OFFER
+      <h2 class="heading l center-content book-heading" style="color:#fff;margin-top: 20px;">SERVICES WE OFFER
       </h2>
       <div class="l-g-4-col">
         <div class="card card-icon" style="background:transparent;border-radius:12px;padding: 10px 5px 5px 5px;">
           <div style="font-size:28px;margin-bottom:12px;"><i class="fas fa-wrench"></i></div>
-          <h3 class="heading s" style="color:#fff;font-size:16px;">Service &amp; Maintenance</h3>
-          <p class="body-text m" style="color:#fff;opacity:0.95;">Leaky faucets, noisy furnaces, tankless water heater
-            maintenance and repairs to keep your home running smoothly.</p>
+          <a href="services/service-and-maintenance.html">
+            <h3 class="heading s" style="color:#fff;font-size:16px;">Service &amp; Maintenance</h3>
+            <p class="body-text m" style="color:#fff;opacity:0.95;">Leaky faucets, clogged drains, or water heater
+              repairs — we handle all your plumbing maintenance needs to keep your Calgary home running smoothly.</p>
+          </a>
         </div>
         <div class="card card-icon" style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;;">
           <div style="font-size:28px;margin-bottom:12px;"><i class="fas fa-tools"></i></div>
-          <h3 class="heading s" style="color:#fff;font-size:16px;">Renovations &amp; Poly B Replacement</h3>
-          <p class="body-text m" style="color:#fff;opacity:0.95;">Updating kitchens or bathrooms? We replace old,
-            problem-prone Poly B piping and handle full renovations.</p>
+          <a href="services/renovations-and-poly-b-replacement.html">
+            <h3 class="heading s" style="color:#fff;font-size:16px;">Renovations &amp; Poly B Replacement</h3>
+            <p class="body-text m" style="color:#fff;opacity:0.95;">Updating kitchens or bathrooms? We replace old,
+              problem-prone Poly B piping and handle complete plumbing renovations with precision and reliability.</p>
+          </a>
         </div>
         <div class="card card-icon card-3-4"
           style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;">
           <div class="second-row" style="font-size:28px;margin-bottom:12px;"><i class="fas fa-hammer"></i></div>
-          <h3 class="heading s" style="color:#fff;font-size:16px;">Residential Contract Plumbing</h3>
-          <p class="body-text m" style="color:#fff;opacity:0.95;">Full plumbing, HVAC and hydronic heating for premium
-            homes — expert design and installation.</p>
+          <a href="services/residential-contract-plumbing.html">
+            <h3 class="heading s" style="color:#fff;font-size:16px;">Residential Contract Plumbing</h3>
+            <p class="body-text m" style="color:#fff;opacity:0.95;">Full plumbing services for residential properties —
+              expert design, installation, and maintenance trusted by Calgary homeowners and contractors alike.</p>
+          </a>
         </div>
         <div class="card card-icon card-3-4"
           style="background:transparent;border-radius:12px;padding:10px 5px 5px 5px;">
           <div class="second-row" style="font-size:28px;margin-bottom:12px;"><i class="fas fa-home"></i></div>
-          <h3 class="heading s" style="color:#fff;font-size:16px;">Custom Homes</h3>
-          <p class="body-text m" style="color:#fff;opacity:0.95;">New home builds, townhouses — we install plumbing
-            systems and fixtures tailored to your space.</p>
+          <a href="services/custom-homes.html">
+            <h3 class="heading s" style="color:#fff;font-size:16px;">Repairs &amp; Upgrades</h3>
+            <p class="body-text m" style="color:#fff;opacity:0.95;">From fixing leaks and replacing fixtures to
+              upgrading
+              old plumbing systems, we make sure your home’s plumbing works efficiently and reliably.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -403,12 +416,11 @@
       <h2 class="heading l center-content book-heading" style="color:#f9a01b; margin-top: 50px;">WHY
         CHOOSE US
       </h2>
-      <ul class="why-choose-us-list"
-        style="padding-left: 50px; padding-right: 50px; margin:0 auto; color:#3c404b; font-weight:600;">
-        <li>Heating &amp; Cooling Experts: From furnace repair to tankless water heater installation.</li>
-        <li>Residential &amp; Commercial Ready: No job too big or small.</li>
-        <li>Eco-Friendly Solutions: Energy-efficient plumbing and HVAC systems.</li>
-        <li>Upfront Pricing: No surprises, no hidden fees.</li>
+      <ul class="why-choose-us-list" style="padding-left: 50px; padding-right: 50px; margin:0 auto; color:#3c404b;">
+        <li><b>Plumbing Experts:</b> From leak detection to complete system installations.</li>
+        <li><b>Residential & Commercial Ready:</b> No job too big or small.</li>
+        <li><b>Eco-Friendly Solutions:</b> Water-efficient and sustainable plumbing options.</li>
+        <li><b>Upfront Pricing:</b> No surprises, no hidden fees.</li>
       </ul>
     </div>
   </section>
@@ -418,8 +430,8 @@
     <div class="container" style="display:flex; align-items:stretch;">
       <div
         style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-left-radius:28px; border-top-left-radius:28px; padding:15px; text-align:center; color:#fff;">
-        <div style="font-size:16px;font-weight:700;margin-bottom:8px;">YEARS EXPERIENCE</div>
-        <div style="font-size:40px;font-weight:800;line-height:1;">10+</div>
+        <div class="single-line-ellipsis" style="font-size:16px;font-weight:700;margin-bottom:8px;">YEARS EXPERIENCE</div>
+        <div class="single-line-ellipsis" style="font-size:40px;font-weight:800;line-height:1;">10+</div>
       </div>
       <div
         style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-right-radius:28px; border-top-right-radius:28px; padding:15px; text-align:center; color:#fff;">
