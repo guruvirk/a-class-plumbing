@@ -177,6 +177,11 @@ function submitForm(event) {
   const startDate = document.getElementById('startDate')?.value || '';
   const startTime = document.querySelector('input[name="startTime"]:checked')?.value || '';
 
+  if (!firstName || !phone) {
+    alert('Please fill out all required fields before submitting.');
+    return;
+  }
+
   const html = `
       <h4>Contact - A Class Plumbing.</h4>
       <p><b>Name: </b> ${firstName} ${lastName}</p>
@@ -193,7 +198,7 @@ function submitForm(event) {
   const data = {
     sender: {
       name: 'A Class Plumbing',
-      email: 'aclassplumbing99@gmail.com',
+      email: 'info@aclassplumbing.ca',
     },
     to: [
       {

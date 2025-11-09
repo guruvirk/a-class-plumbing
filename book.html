@@ -164,7 +164,7 @@
     }
 
     .testimonial-rating {
-      color: #ffb342;
+      color: #f9a01b;
       font-weight: 700;
       text-align: start;
       font-size: 14px;
@@ -334,9 +334,14 @@
             Trusted by hundreds of Calgary homeowners for expert plumbing repairs done right the first time.
           </p>
           <div class="ctas-wrapper" style="margin-top:18px;">
-            <a href="tel:4039516092" class="button medium w-button"
-              style="background-color:#ffb342;border-radius:20px;padding:14px 22px;color:#0e0f11;font-weight:700; font-size: 20px;">
-              <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951 6092
+            <a href="tel:+14039516092" class="button medium w-button"
+              style="background-color:#f9a01b;border-radius:20px;padding:14px 22px;color:#0e0f11;font-weight:700; font-size: 20px;"
+              onclick="gtag('event', 'call_click_book', {
+                  event_category: 'engagement',
+                  event_label: 'Book - Phone Call - Header Button',
+                  value: 1
+                });">
+              <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951-6092
             </a>
           </div>
         </div>
@@ -345,7 +350,9 @@
   </div>
 
   <!-- intro paragraph -->
-  <section style="background:#fff;padding:32px 0;">
+  <section style="padding:32px 0;">
+    <div class="accent absolute color right-side arch right _1"></div>
+    <div class="accent absolute color round-right"></div>
     <div class="container">
       <p class="body-text l center-content" style="font-weight:600; margin-top: 1rem;">
         Since 2011, we’ve been proudly serving Calgary with top-quality plumbing solutions. From leaky pipes to full
@@ -401,16 +408,22 @@
   </section>
 
   <!-- request estimate -->
-  <section style="padding:15px 0;background:#fff;">
+  <section style="padding:15px 0;">
+    <div class="accent absolute color right-side arch right _1"></div>
+    <div class="accent absolute color round-right"></div>
     <div class="container" style="text-align: center;">
       <div class="quote-cta-wrapper">
         <h2 class="heading l center-content book-heading" style="color:#f9a01b; margin-top: 25px;">REQUEST A FREE
           ESTIMATE:
         </h2>
         <h2 class="heading l center-content book-heading" style="color:#f9a01b; margin-top: 20px;">
-          <a href="tel:4039516092"
-            style="background:#ffb342;padding:10px 16px;border-radius:999px;color:#fff;margin-left:10px;font-weight:700;"><i
-              class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951 6092</a>
+          <a href="tel:+14039516092"
+            style="background:#f9a01b;padding:10px 16px;border-radius:999px;color:#fff;margin-left:10px;font-weight:700;"
+            onclick="gtag('event', 'call_click_book', {
+                  event_category: 'engagement',
+                  event_label: 'Book - Phone Call - Free Estimate',
+                  value: 1
+                });"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951-6092</a>
         </h2>
       </div>
       <h2 class="heading l center-content book-heading" style="color:#f9a01b; margin-top: 50px;">WHY
@@ -426,15 +439,15 @@
   </section>
 
   <!-- stats boxes -->
-  <section style="padding:30px 0;background:#fff;">
+  <section style="padding:30px 0;">
     <div class="container" style="display:flex; align-items:stretch;">
       <div
-        style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-left-radius:28px; border-top-left-radius:28px; padding:15px; text-align:center; color:#fff;">
-        <div class="single-line-ellipsis" style="font-size:16px;font-weight:700;margin-bottom:8px;">YEARS EXPERIENCE</div>
-        <div class="single-line-ellipsis" style="font-size:40px;font-weight:800;line-height:1;">10+</div>
+        style="float: left; width: 49%; margin: auto; background:#f9a01b; border-bottom-left-radius:28px; border-top-left-radius:28px; padding:15px; text-align:center; color:#fff;">
+        <div style="font-size:16px;font-weight:700;margin-bottom:8px;">YEARS EXPERIENCE</div>
+        <div style="font-size:40px;font-weight:800;line-height:1;">10+</div>
       </div>
       <div
-        style="float: left; width: 49%; margin: auto; background:#ffb342; border-bottom-right-radius:28px; border-top-right-radius:28px; padding:15px; text-align:center; color:#fff;">
+        style="float: left; width: 49%; margin: auto; background:#f9a01b; border-bottom-right-radius:28px; border-top-right-radius:28px; padding:15px; text-align:center; color:#fff;">
         <div style="font-size:16px;font-weight:700;margin-bottom:8px;">HAPPY CLIENTS</div>
         <div style="font-size:40px;font-weight:800;line-height:1;">200+</div>
       </div>
@@ -442,7 +455,7 @@
   </section>
 
   <!-- testimonials heading -->
-  <section style="padding:15px 0;background:#fff;">
+  <section style="padding:15px 0;">
     <div class="container" style="text-align:center;">
       <h2 class="heading l center-content book-heading" style="color:#f9a01b; ">TESTIMONIALS
       </h2>
@@ -462,8 +475,12 @@
         </div>
         <ul style="margin-top: 30px;" role="list" class="w-list-unstyled">
           <li class="vertical-menu-list-item">
-            <a href="tel:+14039516092" class="vertical-menu-link color-inverse"><i
-                class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951 6092</a>
+            <a onclick="gtag('event', 'call_click_book', {
+                  event_category: 'engagement',
+                  event_label: 'Book - Phone Call - Footer',
+                  value: 1
+                });" href="tel:+14039516092" class="vertical-menu-link color-inverse"><i
+                class="fa-solid fa-phone"></i>&nbsp;&nbsp;(403) 951-6092</a>
           </li>
           <li class="vertical-menu-list-item">
             <a href="mailto:info@aclassplumbing.ca" class="vertical-menu-link color-inverse"><i
