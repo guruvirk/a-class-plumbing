@@ -166,10 +166,6 @@ body {
   text-align: center;
 }
 
-.quote-cta-wrapper .quote-call-button {
-  margin-top: 25px !important;
-}
-
 .single-line-ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -522,7 +518,7 @@ body {
   flex: 0 0 80%; /* each item ~80% of viewport width on mobile */
   max-width: 180px; /* limit size on large screens */
   scroll-snap-align: start;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   background: #f4f4f4;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -534,6 +530,7 @@ body {
   width: 100%;
   height: 230px; /* uniform visual height */
   object-fit: cover; /* crop nicely while preserving aspect ratio */
+  border-radius: 8px;
 }
 
 /* Arrows */
@@ -574,6 +571,10 @@ body {
     width: 28px;
     height: 28px;
     font-size: 18px;
+  }
+
+  .quote-call-button {
+    margin-top: 25px !important;
   }
 }
 
