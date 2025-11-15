@@ -1927,7 +1927,7 @@ textarea.w-select {
   }
 
   .seperate-small-device {
-    display: block !important;
+    display: block !;
   }
 
   .seperate-small-device-item {
@@ -11779,4 +11779,103 @@ html.w-mod-js [data-ix="tooltip-hover"] {
 
 .form-container button:hover {
   background-color: #45a049;
+}
+
+.two-col-list ul {
+  column-count: 2;
+  column-gap: 40px;
+  padding-left: 20px;
+}
+
+/* Switch to single column on medium + small screens */
+@media (max-width: 991px) {
+  .two-col-list ul {
+    column-count: 1;
+  }
+}
+
+.service-hero {
+  padding: 100px 0;
+  background: #fdf8f0; /* same light cream tone as homepage */
+}
+
+.service-hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXT SIDE */
+.service-hero-text h1 {
+  margin-bottom: 24px;
+}
+
+.service-hero-text p {
+  margin-bottom: 16px;
+}
+
+/* IMAGE STRIP STACK */
+.service-hero-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the whole column */
+  gap: 24px;
+}
+
+.service-strip {
+  position: relative;
+  border-radius: 14px;   /* MATCHES OTHER SECTION IMAGES */
+  overflow: hidden;
+}
+
+.service-strip img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ICON ON RIGHT SIDE OF EACH STRIP */
+.service-strip-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-strip-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .service-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-strip img {
+    height: 120px;
+  }
+
+  .service-strip-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ctas-wrapper a.button {
+    margin-bottom: 12px !important;
+    display: block;
+    width: 100%;
+  }
 }
