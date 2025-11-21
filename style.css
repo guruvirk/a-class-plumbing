@@ -600,7 +600,7 @@ nav .dropdown:hover .dropdown-menu {
 
 .heading.l {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-family: Droid Serif, serif;
   font-size: 2.5rem;
   font-weight: 700;
@@ -1927,7 +1927,7 @@ textarea.w-select {
   }
 
   .seperate-small-device {
-    display: block !;
+    display: block !important;
   }
 
   .seperate-small-device-item {
@@ -3211,7 +3211,7 @@ blockquote {
 
 .heading.l {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-family: Droid Serif, serif;
   font-size: 2.5rem;
   font-weight: 700;
@@ -10213,11 +10213,11 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   }
 
   .heading.xl {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .heading.l {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   .body-text.l._60,
@@ -10481,6 +10481,11 @@ html.w-mod-js [data-ix="tooltip-hover"] {
 
   .feature-section {
     overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .sm-margin-20-top { 
+    margin-top: 20px;
   }
 
   .feature-grid-section.s-m-t-64._60vh {
@@ -11303,8 +11308,8 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   }
 
   .wrapper-circle-text {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
   }
 
   .line-accent.absolute {
@@ -11504,7 +11509,7 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   }
 
   .image-4 {
-    height: 200px;
+    width: 100%;
   }
 
   .collection-item {
@@ -11571,6 +11576,7 @@ html.w-mod-js [data-ix="tooltip-hover"] {
   .cta-image {
     width: 190px;
   }
+
 }
 
 #w-node-ecd7c4d9-8eb8-5c4c-5a67-2dcbbba90a94-877c7330 {
